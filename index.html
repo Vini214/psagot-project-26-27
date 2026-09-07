@@ -3,49 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 20px;
-        padding: 48px 64px;
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(8px);
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.5rem, 6vw, 5rem);
-        color: #1f1f1f;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .name {
-        display: block;
-        margin-top: 10px;
-        color: #ffffff;
-        text-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome | Noam</title>
   </head>
   <body>
-    <div class="card">
-      <h1>Hello <span class="name">I'm Noam</span></h1>
-    </div>
+    <main class="welcome-shell">
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Noam home">
+          <span class="brand-mark">N</span>
+          <span>noam<span class="brand-dot">.</span></span>
+        </a>
+        <span class="status"><span class="status-dot"></span> Open to new ideas</span>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Nice to meet you</p>
+          <h1>Make room for<br /><em>good things.</em></h1>
+          <p class="intro">
+            Welcome to my little corner of the web. I’m Noam, a curious mind building,
+            learning, and following the interesting thread wherever it leads.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="mailto:hello@example.com">
+              Say hello <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-quiet" href="#about">Explore more <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Abstract illustration of a sunrise over a landscape">
+          <div class="art-sun"></div>
+          <div class="art-ring art-ring-one"></div>
+          <div class="art-ring art-ring-two"></div>
+          <div class="art-horizon"></div>
+          <div class="art-hill art-hill-back"></div>
+          <div class="art-hill art-hill-front"></div>
+          <span class="art-label">01 / BEGIN HERE</span>
+          <span class="art-caption">A small start<br />can go a long way.</span>
+        </div>
+      </section>
+
+      <section class="welcome-note" id="about">
+        <span class="note-number">01</span>
+        <p>There’s always something new around the corner. Thanks for stopping by.</p>
+        <span class="note-arrow" aria-hidden="true">↘</span>
+      </section>
+    </main>
   </body>
 </html>
