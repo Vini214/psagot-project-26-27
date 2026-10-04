@@ -1,54 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Welcome | Noam</title>
-  </head>
-  <body>
-    <main class="welcome-shell">
-      <nav class="topbar" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Noam home">
-          <span class="brand-mark">N</span>
-          <span>noam<span class="brand-dot">.</span></span>
-        </a>
-        <span class="status"><span class="status-dot"></span> Open to new ideas</span>
-      </nav>
-
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> Nice to meet you</p>
-          <h1>Make room for<br /><em>good things.</em></h1>
-          <p class="intro">
-            Welcome to my little corner of the web. I’m Noam, a curious mind building,
-            learning, and following the interesting thread wherever it leads.
-          </p>
-          <div class="actions">
-            <a class="button button-primary" href="mailto:hello@example.com">
-              Say hello <span aria-hidden="true">↗</span>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>סטודיו פיקסלים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="studio">
+        <header class="studio-header">
+            <a class="brand" href="#" aria-label="סטודיו פיקסלים, דף הבית">
+                <span class="brand-mark" aria-hidden="true">✳</span>
+                <span>פיקסל<span class="brand-light">יה</span></span>
             </a>
-            <a class="button button-quiet" href="#about">Explore more <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
+            <span class="header-note"><span class="status-dot"></span> המקום הקטן לרעיונות גדולים</span>
+        </header>
 
-        <div class="hero-art" aria-label="Abstract illustration of a sunrise over a landscape">
-          <div class="art-sun"></div>
-          <div class="art-ring art-ring-one"></div>
-          <div class="art-ring art-ring-two"></div>
-          <div class="art-horizon"></div>
-          <div class="art-hill art-hill-back"></div>
-          <div class="art-hill art-hill-front"></div>
-          <span class="art-label">01 / BEGIN HERE</span>
-          <span class="art-caption">A small start<br />can go a long way.</span>
-        </div>
-      </section>
+        <section class="workspace" aria-labelledby="page-title">
+            <div class="intro">
+                <div class="eyebrow"><span></span> סטודיו לציור דיגיטלי</div>
+                <h1 id="page-title">כל פיקסל<br><span>מתחיל ברעיון.</span></h1>
+                <p>בחרו צבע, תנו לדמיון להוביל, וציירו משהו משלכם.</p>
+                <div class="canvas-detail">
+                    <span class="detail-icon" aria-hidden="true">▦</span>
+                    <span><strong>16 × 16</strong><small>קנבס הפיקסלים שלכם</small></span>
+                </div>
+            </div>
 
-      <section class="welcome-note" id="about">
-        <span class="note-number">01</span>
-        <p>There’s always something new around the corner. Thanks for stopping by.</p>
-        <span class="note-arrow" aria-hidden="true">↘</span>
-      </section>
+            <section class="drawing-card" aria-label="לוח ציור">
+                <div class="card-top">
+                    <div>
+                        <span class="card-kicker">היצירה שלי</span>
+                        <h2>בואו נצייר</h2>
+                    </div>
+                    <span class="live-badge"><span></span> מוכן ליצירה</span>
+                </div>
+
+                <div class="toolbar" aria-label="כלי ציור">
+                    <label class="color-control" for="colorPicker">
+                        <span class="control-label">צבע מברשת</span>
+                        <span class="color-input-wrap">
+                            <input type="color" id="colorPicker" value="#7357d8" aria-label="בחירת צבע">
+                            <span>בחירת צבע</span>
+                        </span>
+                    </label>
+                    <span class="toolbar-divider" aria-hidden="true"></span>
+                    <button id="eraserButton" class="tool-button eraser-button" type="button" aria-pressed="false">
+                        <span class="tool-icon" aria-hidden="true">⌫</span>
+                        <span>מחק</span>
+                    </button>
+                    <button id="clearButton" class="tool-button clear-button" type="button">
+                        <span class="tool-icon" aria-hidden="true">↺</span>
+                        <span>נקה הכול</span>
+                    </button>
+                </div>
+
+                <div class="canvas-wrap">
+                    <div id="pixelCanvas" class="pixel-grid" role="grid" aria-label="קנבס ציור בגודל 16 על 16"></div>
+                </div>
+
+                <footer class="canvas-footer">
+                    <span class="hint-icon" aria-hidden="true">✦</span>
+                    <span>לחצו או גררו על הקנבס כדי לצייר</span>
+                    <span class="footer-sparkle" aria-hidden="true">✳</span>
+                </footer>
+            </section>
+        </section>
+
+        <footer class="page-footer">
+            <span>נוצר בשביל הרגע שבו רעיון פוגש פיקסל</span>
+            <span class="footer-heart" aria-hidden="true">♥</span>
+        </footer>
     </main>
-  </body>
+
+    <script src="index.js"></script>
+</body>
 </html>
